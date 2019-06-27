@@ -23,6 +23,7 @@ oneMore.addEventListener('click', () => {
 });
 
 
+
 function removeAllChildren(element) {
   while (element.firstChild) { // 子供の要素がある限り削除
     element.removeChild(element.firstChild);
@@ -35,8 +36,8 @@ function divination() {
   fortune.innerText = horos[num];
 
 
-  const nums = Math.floor(Math.random() * 1000);
-  const word = `あなたは今日、カフェイン${nums}mg摂取してください`;
+  const nums = Math.floor(Math.random() * 100000);
+  const word = `あなたは今日、カフェイン${nums}mg摂取してください。そしたら何かが見えてくるでしょう。`;
 
   words.innerText = word;
 

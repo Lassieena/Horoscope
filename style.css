@@ -193,8 +193,9 @@ section {
   height: 100%;
 }
 
-/* 最初に押すボタン */
 
+
+/* 最初に押すボタン */
 #buttonScope {
   display: inline-block;
   position: absolute;
@@ -236,13 +237,33 @@ section {
 
 h1 {
   font-size: 50px;
-  margin: 30px;
 }
+
+#fortune {
+  position: absolute;
+  top: -60px;
+  right: 190px;
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  width: 120px;
+  height: 120px;
+  line-height: 120px;
+  border-radius: 50%;
+  text-align: center;
+  overflow: hidden;
+  font-weight: bold;
+  background: #ffaaaa;
+  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.66);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.28);
+}
+
 
 p {
   font-size: 20px;
-  margin: 30px;
+
 }
+
 
 #oneMore {
   position: absolute;
@@ -260,6 +281,13 @@ p {
   font-weight: bold;
   background: #f9a9ae;
   user-select: none;
+}
+
+#words {
+  position: absolute;
+  top: 75px;
+  line-height: 30px;
+  margin: 30px;
 }
 
 #tweet-area {
@@ -298,4 +326,28 @@ p {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+@media screen and (max-width:510px) {
+
+  /*500px以下で適用する内容*/
+  #result {
+    width: 300px;
+    height: 450px;
+  }
+
+  #fortune {
+    right: 90px;
+  }
+
+  #oneMore {
+    bottom: 130px;
+    left: 65px;
+  }
+
+  #tweet-area {
+    bottom: 40px;
+    right: 65px;
+  }
+
 }
