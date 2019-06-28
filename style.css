@@ -176,6 +176,7 @@ select {
 
 html,
 body {
+  background: RGB(255, 204, 204, 0.2);
   font-family: 'Hiragino Kaku Gothic Pro',
     'ヒラギノ角ゴ Pro W3',
     'メイリオ',
@@ -185,6 +186,8 @@ body {
   height: 100%;
   overflow: hidden;
 }
+
+
 
 section {
   display: flex;
@@ -209,7 +212,7 @@ section {
   line-height: 100px;
   overflow: hidden;
   font-weight: bold;
-  background: #f9a9ae;
+  background-image: linear-gradient(to top, #ff0844 0%, #ffb199 100%);
   user-select: none;
 }
 
@@ -219,7 +222,6 @@ section {
   transform: translateY(2px);
   /*沈むように*/
   box-shadow: 0 0 1px rgba(0, 0, 0, 0.15);
-  background-image: linear-gradient(#fed6e3 0%, #ffbcbc 100%);
   /*グラデーションを明るく*/
 }
 
@@ -231,8 +233,9 @@ section {
   width: 500px;
   height: 300px;
   text-align: center;
-  border: solid thick#f9a9ae;
+  border: solid thick#ed6ea0;
   border-radius: 10px;
+  background: #fff;
 }
 
 h1 {
@@ -253,11 +256,15 @@ h1 {
   text-align: center;
   overflow: hidden;
   font-weight: bold;
-  background: #ffaaaa;
+  background: #e53935;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, #e35d5b, #e53935);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, #e35d5b, #e53935);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.66);
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.28);
 }
-
 
 p {
   font-size: 20px;
@@ -327,6 +334,242 @@ p {
     transform: translateY(0);
   }
 }
+
+/* 背景アニメーション */
+.circles {
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.circles li {
+  position: absolute;
+  display: block;
+  list-style: none;
+  background: rgba(300, 100, 100, 0.2);
+  animation: animate 25s linear infinite;
+  bottom: -150px;
+  cursor: default;
+}
+
+.circles li:nth-child(1) {
+  left: 25%;
+  width: 80px;
+  height: 80px;
+  animation-delay: 0s;
+}
+
+
+.circles li:nth-child(2) {
+  left: 10%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 2s;
+  animation-duration: 12s;
+}
+
+.circles li:nth-child(3) {
+  left: 70%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 4s;
+}
+
+.circles li:nth-child(4) {
+  left: 40%;
+  width: 60px;
+  height: 60px;
+  animation-delay: 0s;
+  animation-duration: 18s;
+}
+
+.circles li:nth-child(5) {
+  left: 65%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 0s;
+}
+
+.circles li:nth-child(6) {
+  left: 75%;
+  width: 110px;
+  height: 110px;
+  animation-delay: 3s;
+}
+
+.circles li:nth-child(7) {
+  left: 35%;
+  width: 150px;
+  height: 150px;
+  animation-delay: 7s;
+}
+
+.circles li:nth-child(8) {
+  left: 50%;
+  width: 25px;
+  height: 25px;
+  animation-delay: 15s;
+  animation-duration: 15s;
+}
+
+.circles li:nth-child(9) {
+  left: 20%;
+  width: 15px;
+  height: 15px;
+  animation-delay: 2s;
+  animation-duration: 35s;
+}
+
+.circles li:nth-child(10) {
+  left: 85%;
+  width: 150px;
+  height: 150px;
+  animation-delay: 0s;
+  animation-duration: 9s;
+}
+
+.circles li:nth-child(11) {
+  left: 15%;
+  width: 30px;
+  height: 30px;
+  animation-delay: 3s;
+  animation-duration: 5s;
+}
+
+.circles li:nth-child(12) {
+  left: 28%;
+  width: 120px;
+  height: 120px;
+  animation-delay: 2s;
+  animation-duration: 5s;
+}
+
+.circles li:nth-child(13) {
+  left: 92%;
+  width: 100px;
+  height: 100px;
+  animation-delay: 1s;
+  animation-duration: 8s;
+}
+
+.circles li:nth-child(14) {
+  left: 7%;
+  width: 53px;
+  height: 53px;
+  animation-delay: 0s;
+  animation-duration: 11s;
+}
+
+.circles li:nth-child(15) {
+  left: 25%;
+  width: 150px;
+  height: 150px;
+  animation-delay: 9s;
+  animation-duration: 12s;
+}
+
+.circles li:nth-child(16) {
+  left: 55%;
+  width: 62px;
+  height: 62px;
+  animation-delay: 4s;
+  animation-duration: 7s;
+}
+
+.circles li:nth-child(17) {
+  left: 39%;
+  width: 52px;
+  height: 52px;
+  animation-delay: 5s;
+  animation-duration: 14s;
+}
+
+.circles li:nth-child(18) {
+  left: 30%;
+  width: 140px;
+  height: 140px;
+  animation-delay: 7s;
+  animation-duration: 9s;
+}
+
+.circles li:nth-child(19) {
+  left: 13%;
+  width: 128px;
+  height: 128px;
+  animation-delay: 5s;
+  animation-duration: 9s;
+}
+
+.circles li:nth-child(20) {
+  left: 68%;
+  width: 68px;
+  height: 68px;
+  animation-delay: 3s;
+  animation-duration: 10s;
+}
+
+.circles li:nth-child(21) {
+  left: 74%;
+  width: 98px;
+  height: 98px;
+  animation-delay: 0s;
+  animation-duration: 11s;
+}
+
+.circles li:nth-child(22) {
+  left: 64%;
+  width: 110px;
+  height: 110px;
+  animation-delay: 1s;
+  animation-duration: 8s;
+}
+
+.circles li:nth-child(23) {
+  left: 57%;
+  width: 90px;
+  height: 90px;
+  animation-delay: 0s;
+  animation-duration: 13s;
+}
+
+.circles li:nth-child(23) {
+  left: 12%;
+  width: 70px;
+  height: 70px;
+  animation-delay: 1s;
+  animation-duration: 12s;
+}
+
+.circles li:nth-child(23) {
+  left: 23%;
+  width: 15px;
+  height: 15px;
+  animation-delay: 2s;
+  animation-duration: 18s;
+}
+
+@keyframes animate {
+
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+    border-radius: 0;
+  }
+
+  100% {
+    transform: translateY(-1000px) rotate(720deg);
+    opacity: 0.1;
+    border-radius: 80%;
+  }
+
+}
+
+
+
 
 @media screen and (max-width:510px) {
 

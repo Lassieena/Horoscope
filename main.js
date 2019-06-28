@@ -36,8 +36,24 @@ function divination() {
   fortune.innerText = horos[num];
 
 
+  const miliG = ['カフェイン', '塩分', '糖質', '脂質', 'たんぱく質', 'ミネラル', 'ビタミン', '食物繊維', '脂質'];
+  const mili = Math.floor(Math.random() * miliG.length);
+
+  const happiness = [
+    'そしたら何かが見えてくるでしょう。',
+    '明日また占ってください。',
+    'きっと君に幸福があるでしょう。',
+    '僕らはきっと目指している。',
+    'きっとあなたの成長につながるだろう',
+    '摂取しなければ不幸になるかもね。',
+    '神は君の頑張りきっと見ている。',
+    'あなたの成長を。never give up',
+    'あなたの挑戦を祈っております。'
+  ];
+  const happ = Math.floor(Math.random() * happiness.length);
+
   const nums = Math.floor(Math.random() * 100000);
-  const word = `あなたは今日、カフェイン${nums}mg摂取してください。そしたら何かが見えてくるでしょう。`;
+  const word = `あなたは今日、${miliG[mili]}${nums}mg摂取してください。${happiness[happ]}`;
 
   words.innerText = word;
 
