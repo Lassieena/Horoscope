@@ -1,5 +1,6 @@
 'use strict';
 
+
 const buttonScope = document.getElementById('buttonScope');
 const result = document.getElementById('result');
 const oneMore = document.getElementById('oneMore');
@@ -9,7 +10,7 @@ const tweetDiviede = document.getElementById('tweet-area');
 
 result.style.display = "none";
 
-
+// 占い
 buttonScope.addEventListener('click', () => {
   buttonScope.style.display = 'none';
   result.style.display = "block";
@@ -46,9 +47,12 @@ function divination() {
     '僕らはきっと目指している。',
     'きっとあなたの成長につながるだろう',
     '摂取しなければ不幸になるかもね。',
-    '神は君の頑張りきっと見ている。',
+    '神は君の頑張りをきっと見ている。',
     'あなたの成長を。never give up.',
-    'あなたの挑戦を祈っております。'
+    'あなたの挑戦を祈っております。',
+    'これができれば君も竜王だ!!',
+    'タピオカも一緒に食べよう!',
+    'ラーメン食べれば解決だね'
   ];
   const happ = Math.floor(Math.random() * happiness.length);
 

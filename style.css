@@ -116,12 +116,13 @@ q:after {
 a {
   margin: 0;
   padding: 0;
-  font-size: 100%;
+  font-size: 90%;
   vertical-align: baseline;
   background: transparent;
   text-decoration: none;
   color: #fff;
 }
+
 
 a:active {
   color: #194fd5;
@@ -195,7 +196,6 @@ section {
   align-items: center;
   height: 100%;
 }
-
 
 
 /* 最初に押すボタン */
@@ -319,14 +319,14 @@ p {
 
 .anime {
   animation-name: animation;
-  animation-duration: 2s;
+  animation-duration: 1s;
   animation-iteration-count: 1;
 }
 
 @keyframes animation {
   0% {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(30px);
   }
 
   100% {
