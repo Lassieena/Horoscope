@@ -77,7 +77,7 @@ function divination() {
   ];
   const happ = Math.floor(Math.random() * happiness.length);
 
-  const nums = Math.floor(Math.random() * 100000);
+  const nums = Math.floor(Math.random() * 1000);
   const word = `あなたは今日、${miliG[mili]}${nums}mg摂取してください。${happiness[happ]}`;
 
   words.innerText = word;
