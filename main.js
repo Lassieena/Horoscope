@@ -47,7 +47,7 @@ function divination() {
     'きっとあなたの成長につながるだろう',
     '摂取しなければ不幸になるかもね。',
     '神は君の頑張りきっと見ている。',
-    'あなたの成長を。never give up',
+    'あなたの成長を。never give up.',
     'あなたの挑戦を祈っております。'
   ];
   const happ = Math.floor(Math.random() * happiness.length);
