@@ -68,7 +68,7 @@ function divination() {
   anchor.setAttribute('href', hrefValue);
   anchor.setAttribute('target', '_blank');
   anchor.className = 'twitter-hashtag-button';
-  anchor.setAttribute('data-text', horos[num] + '\n' + word);
+  anchor.setAttribute('data-text', horos[num] + '。\n' + word);
   anchor.innerText = 'Tweet #今日の運勢';
 
   tweetDiviede.appendChild(anchor);
