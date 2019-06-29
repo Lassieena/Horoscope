@@ -34,27 +34,30 @@ function removeAllChildren(element) {
 function divination() {
   const horos = ['大吉', '吉', '中吉', '小吉', '末吉', '凶', '大凶'];
   const num = Math.random();
+  let horo;
   if (num < 0.01) {
-    fortune.innerText = horos[0];
+    horo = horos[0];
   } else if (num < 0.11) {
-    fortune.innerText = horos[1];
+    horo = horos[1];
 
   } else if (num < 0.25) {
-    fortune.innerText = horos[2];
+    horo = horos[2];
 
   } else if (num < 0.38) {
-    fortune.innerText = horos[3];
+    horo = horos[3];
 
   } else if (num < 0.52) {
-    fortune.innerText = horos[4];
+    horo = horos[4];
 
   } else if (num < 0.75) {
-    fortune.innerText = horos[5];
+    horo = horos[5];
 
   } else if (num < 1) {
-    fortune.innerText = horos[6];
+    horo = horos[6];
 
   }
+
+  fortune.innerText = horo;
 
 
   const miliG = ['カフェイン', '塩分', '糖質', '脂質', 'たんぱく質', 'ミネラル', 'ビタミン', '食物繊維', '脂質', 'カロリー'];
@@ -83,24 +86,26 @@ function divination() {
   words.innerText = word;
 
 
+  const tweetWord = horo + '。%0a' + word;
   // ツイートエリア
   removeAllChildren(tweetDiviede);
   const anchor = document.createElement('a');
-  const hrefValue = "https://twitter.com/intent/tweet?button_hashtag=" +
+  const hrefValue = "https://twitter.com/intent/tweet?text=" +
+    tweetWord + "&button_hashtag=" +
     encodeURIComponent('今日の運勢') +
     "&ref_src=twsrc%5Etfw";
 
   anchor.setAttribute('href', hrefValue);
   anchor.setAttribute('target', '_blank');
-  anchor.className = 'twitter-hashtag-button';
-  anchor.setAttribute('data-text', horos[num] + '。\n' + word);
-  anchor.innerText = 'Tweet #今日の運勢';
+  // anchor.className = 'twitter-hashtag-button';
+  // anchor.setAttribute('data-text', horo + '。\n' + word);
+  anchor.innerText = 'tweet #今日の運勢';
 
   tweetDiviede.appendChild(anchor);
 
-  // widgets.js の設定
-  const script = document.createElement('script');
-  script.setAttribute('src', 'https://platform.twitter.com/widgets.js');
-  tweetDiviede.appendChild(script);
+  // // widgets.js の設定
+  // const script = document.createElement('script');
+  // script.setAttribute('src', 'https://platform.twitter.com/widgets.js');
+  // tweetDiviede.appendChild(script);
 
 }
