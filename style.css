@@ -202,6 +202,8 @@ section {
 
 /* 最初に押すボタン */
 #buttonScope {
+  cursor: pointer;
+  z-index: 1;
   display: inline-block;
   position: absolute;
   text-decoration: none;
@@ -231,6 +233,7 @@ section {
 /* 結果画面 */
 
 #result {
+  z-index: 1;
   position: absolute;
   width: 500px;
   height: 300px;
@@ -275,6 +278,7 @@ p {
 
 
 #oneMore {
+  cursor: pointer;
   position: absolute;
   bottom: 30px;
   left: 30px;
@@ -288,8 +292,12 @@ p {
   text-align: center;
   overflow: hidden;
   font-weight: bold;
-  background: #f9a9ae;
+  background: #F6ADC6;
   user-select: none;
+}
+
+#oneMore:active {
+  color: #FF3399;
 }
 
 #words {
@@ -300,7 +308,8 @@ p {
   margin: 25px;
 }
 
-#tweet-area {
+
+.twitter-button {
   position: absolute;
   bottom: 30px;
   right: 30px;
@@ -355,17 +364,9 @@ p {
 }
 
 /* 背景アニメーション */
-.circles {
-  z-index: -1;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-}
 
-.circles li {
+
+ul li {
   position: absolute;
   display: block;
   list-style: none;
@@ -375,7 +376,11 @@ p {
   cursor: default;
 }
 
-.circles li:nth-child(1) {
+ul li:hover {
+  background: rgba(300, 100, 100, 1);
+}
+
+ul li:nth-child(1) {
   left: 25%;
   width: 80px;
   height: 80px;
@@ -384,7 +389,7 @@ p {
 }
 
 
-.circles li:nth-child(2) {
+ul li:nth-child(2) {
   left: 10%;
   width: 20px;
   height: 20px;
@@ -392,31 +397,31 @@ p {
   animation-duration: 12s;
 }
 
-.circles li:nth-child(3) {
+ul li:nth-child(3) {
   left: 50%;
-  width: 30px;
-  height: 30px;
+  width: 100px;
+  height: 100px;
   animation-delay: 4s;
   animation-duration: 4s;
 }
 
-.circles li:nth-child(4) {
-  left: 55%;
+ul li:nth-child(4) {
+  left: 45%;
   width: 60px;
   height: 60px;
-  animation-delay: 0s;
-  animation-duration: 17s;
+  animation-delay: 1s;
+  animation-duration: 10s;
 }
 
-.circles li:nth-child(5) {
-  left: 65%;
-  width: 20px;
-  height: 20px;
-  animation-delay: 0s;
+ul li:nth-child(5) {
+  left: 52%;
+  width: 50px;
+  height: 50px;
+  animation-delay: 3s;
   animation-duration: 9s;
 }
 
-.circles li:nth-child(6) {
+ul li:nth-child(6) {
   left: 8%;
   width: 110px;
   height: 110px;
@@ -424,15 +429,15 @@ p {
   animation-duration: 6s;
 }
 
-.circles li:nth-child(7) {
+ul li:nth-child(7) {
   left: 35%;
   width: 30px;
   height: 30px;
-  animation-delay: 9s;
+  animation-delay: 5s;
   animation-duration: 5s;
 }
 
-.circles li:nth-child(8) {
+ul li:nth-child(8) {
   left: 18%;
   width: 15px;
   height: 15px;
@@ -440,7 +445,7 @@ p {
   animation-duration: 15s;
 }
 
-.circles li:nth-child(9) {
+ul li:nth-child(9) {
   left: 85%;
   width: 150px;
   height: 150px;
@@ -448,7 +453,7 @@ p {
   animation-duration: 7s;
 }
 
-.circles li:nth-child(10) {
+ul li:nth-child(10) {
   left: 15%;
   width: 30px;
   height: 30px;
@@ -456,7 +461,7 @@ p {
   animation-duration: 5s;
 }
 
-.circles li:nth-child(11) {
+ul li:nth-child(11) {
   left: 83%;
   width: 120px;
   height: 120px;
@@ -464,7 +469,7 @@ p {
   animation-duration: 5s;
 }
 
-.circles li:nth-child(12) {
+ul li:nth-child(12) {
   left: 7%;
   width: 53px;
   height: 53px;
@@ -472,15 +477,15 @@ p {
   animation-duration: 10s;
 }
 
-.circles li:nth-child(13) {
+ul li:nth-child(13) {
   left: 25%;
-  width: 150px;
-  height: 150px;
+  width: 130px;
+  height: 130px;
   animation-delay: 9s;
   animation-duration: 7s;
 }
 
-.circles li:nth-child(14) {
+ul li:nth-child(14) {
   left: 45%;
   width: 8px;
   height: 8px;
@@ -489,14 +494,14 @@ p {
 }
 
 
-.circles li:nth-child(15) {
+ul li:nth-child(15) {
   left: 30%;
   width: 110px;
   height: 110px;
   animation-delay: 4s;
 }
 
-.circles li:nth-child(16) {
+ul li:nth-child(16) {
   left: 13%;
   width: 12px;
   height: 12px;
@@ -504,7 +509,7 @@ p {
   animation-duration: 9s;
 }
 
-.circles li:nth-child(17) {
+ul li:nth-child(17) {
   left: 68%;
   width: 68px;
   height: 68px;
@@ -512,7 +517,7 @@ p {
   animation-duration: 10s;
 }
 
-.circles li:nth-child(18) {
+ul li:nth-child(18) {
   left: 23%;
   width: 98px;
   height: 98px;
@@ -520,21 +525,22 @@ p {
   animation-duration: 6s;
 }
 
-.circles li:nth-child(19) {
-  left: 64%;
-  width: 110px;
-  height: 110px;
+ul li:nth-child(19) {
+  left: 74%;
+  width: 90px;
+  height: 90px;
   animation-delay: 1s;
   animation-duration: 8s;
 }
 
-.circles li:nth-child(20) {
+ul li:nth-child(20) {
   left: 57%;
   width: 90px;
   height: 90px;
   animation-delay: 0s;
   animation-duration: 15s;
 }
+
 
 
 @keyframes animate {

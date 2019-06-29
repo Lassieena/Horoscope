@@ -15,7 +15,6 @@ buttonScope.addEventListener('click', () => {
   buttonScope.style.display = 'none';
   result.style.display = "block";
   divination();
-
 });
 
 oneMore.addEventListener('click', () => {
@@ -97,7 +96,7 @@ function divination() {
 
   anchor.setAttribute('href', hrefValue);
   anchor.setAttribute('target', '_blank');
-  // anchor.className = 'twitter-hashtag-button';
+  anchor.className = 'twitter-button';
   // anchor.setAttribute('data-text', horo + '。\n' + word);
   anchor.innerText = 'tweet #今日の運勢';
 
