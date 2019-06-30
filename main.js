@@ -99,8 +99,9 @@ function divination() {
   removeAllChildren(tweetDiviede);
   const anchor = document.createElement('a');
   const hrefValue = "https://twitter.com/intent/tweet?text=" +
-    tweetWord + "&button_hashtag=" +
-    encodeURIComponent('今日の運勢') +
+    tweetWord +
+    "&button_hashtag=" +
+    "今日の運勢" +
     "&ref_src=twsrc%5Etfw";
 
   anchor.setAttribute('href', hrefValue);
