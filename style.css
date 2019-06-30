@@ -579,7 +579,7 @@ ul li:nth-child(20) {
     left: 65px;
   }
 
-  #tweet-area {
+  .twitter-button {
     bottom: 40px;
     right: 65px;
   }

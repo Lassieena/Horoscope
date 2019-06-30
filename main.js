@@ -7,8 +7,17 @@ const oneMore = document.getElementById('oneMore');
 const fortune = document.getElementById('fortune');
 const words = document.getElementById('words');
 const tweetDiviede = document.getElementById('tweet-area');
-
+// const li = document.getElementsByTagName('li');
+// console.log(li.length);
 result.style.display = "none";
+
+//スマホスクロールさせない
+document.addEventListener('touchmove', (e) => {
+  e.preventDefault();
+}, {
+  passive: false
+});
+
 
 // 占い
 buttonScope.addEventListener('click', () => {
