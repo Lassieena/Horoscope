@@ -60,7 +60,7 @@ function divination() {
   } else if (num < 0.75) {
     horo = horos[5];
 
-  } else if (num < 1) {
+  } else {
     horo = horos[6];
 
   }
@@ -94,8 +94,8 @@ function divination() {
   words.innerText = word;
 
 
-  const tweetWord = horo + '。%0a' + word;
   // ツイートエリア
+  const tweetWord = horo + '。%0a' + word;
   removeAllChildren(tweetDiviede);
   const anchor = document.createElement('a');
   const hrefValue = "https://twitter.com/intent/tweet?text=" +
